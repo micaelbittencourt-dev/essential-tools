@@ -1,0 +1,25 @@
+:host {
+    
+    height: 100%;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+
+}
+.row {
+    display: flex;
+}
+a {
+    text-decoration: none;
+}
+mat-card {
+    background: #31beff;
+    color:#ffffff;
+    text-align: center;
+    width: 150px;
+}
+mat-card-header {
+    justify-content: center;
+    color: #ffffff
+}
+
