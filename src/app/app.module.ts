@@ -10,6 +10,9 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { HeaderComponent } from './todo-list/components/header/header.component';
 import { TodoInputAddItensComponent } from './todo-list/components/todo-input-add-itens/todo-input-add-itens.component';
 import { TodoButtonDeleteAllComponent } from './todo-list/components/todo-button-delete-all/todo-button-delete-all.component';
+import { GridsterModule } from "angular-gridster2";
+import { GridsterTestComponent } from './gridster/gridster-test.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { TodoButtonDeleteAllComponent } from './todo-list/components/todo-button
     HeaderComponent,
     TodoInputAddItensComponent,
     TodoButtonDeleteAllComponent,
+    GridsterTestComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgMaterialModule
+    FormsModule,
+    NgMaterialModule,
+    GridsterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
