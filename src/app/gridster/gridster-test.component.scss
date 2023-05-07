@@ -1,0 +1,29 @@
+:host {
+    height: 100vh;
+    display: block;
+}
+.item-buttons {
+    justify-content: space-between;
+    display: flex;
+}
+.drag-handler {
+    border: none;
+    background: #00000000;
+    color: #d1cccc;
+    padding: 0px;
+}
+.delete-handler {
+    border: none;
+    background: #00000000;
+    color: #fa3e3e;
+    padding: 0px;
+}
+.body-gridster-item {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 75%;
+}
+gridster {
+    background: #f5f4f4;
+}

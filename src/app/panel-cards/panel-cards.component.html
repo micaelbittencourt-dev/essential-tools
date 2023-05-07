@@ -1,0 +1,26 @@
+<div cdkDropListGroup>
+    <mat-card class="card-primary">
+        <mat-card-header class="card-primary-header">
+            <a (click)="openDialog()">
+                <mat-card class="card-add">
+                    <mat-card-header>
+
+                    </mat-card-header>
+                    <mat-card-content>
+                        <mat-icon>add</mat-icon>
+                        <span>ADD</span>
+                    </mat-card-content>
+                </mat-card>
+            </a>
+      
+        </mat-card-header>
+        <mat-card-content cdkDropList [cdkDropListData]="warLoc" (cdkDropListDropped)="drop($event)">
+            <mat-card class="card-secondary" *ngFor="let loc of warLoc" cdkDrag>
+                <mat-card-content>
+                    {{loc}}
+                </mat-card-content>
+            </mat-card>
+        </mat-card-content>
+    </mat-card>
+    <app-gridster-test [dashboard]="dashboard" (newItemEvent)="restoreItem($event)"></app-gridster-test>
+</div>

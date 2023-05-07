@@ -1,16 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DisplayGrid, GridType, GridsterConfig, GridsterItem }  from 'angular-gridster2';
-import { GridsterResizable } from 'angular-gridster2/lib/gridsterResizable.service';
 
 @Component({
-  selector: 'app-gridster',
+  selector: 'app-gridster-test',
   templateUrl: './gridster-test.component.html',
   styleUrls: ['./gridster-test.component.scss'],
 })
 
 export class GridsterTestComponent {
+  
   options!: GridsterConfig;
-  dashboard!: Array<GridsterItem>;
+
+  @Input()
+  dashboard: Array<GridsterItem> = [];
+  
+  @Output() 
+  newItemEvent = new EventEmitter<string>();
 
   static itemChange(item: any, itemComponent: any) {
     console.info('itemChanged', item, itemComponent);
@@ -43,8 +48,6 @@ export class GridsterTestComponent {
       mobileBreakpoint: 0,
       useBodyForBreakpoint: true
     };
-
-    this.dashboard = [];
   }
 
   changedOptions() {
@@ -55,6 +58,7 @@ export class GridsterTestComponent {
 
   removeItem(item: GridsterItem) {
     this.dashboard.splice(this.dashboard.indexOf(item), 1);
+    this.newItemEvent.emit(item["label"]);
   }
 
   addItem(value:string) {
@@ -64,7 +68,7 @@ export class GridsterTestComponent {
       rows: 2,
       cols: 2,
       label: value,
-      hasContent: true
+      hasContent: true,
     });
   }
 }

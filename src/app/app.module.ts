@@ -13,6 +13,8 @@ import { TodoButtonDeleteAllComponent } from './todo-list/components/todo-button
 import { GridsterModule } from "angular-gridster2";
 import { GridsterTestComponent } from './gridster/gridster-test.component';
 import { FormsModule } from '@angular/forms';
+import { PanelCardsComponent } from './panel-cards/panel-cards.component';
+import { CreateAndEditCardComponent } from './panel-cards/dialogs/create-and-edit-card/create-and-edit-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { FormsModule } from '@angular/forms';
     TodoInputAddItensComponent,
     TodoButtonDeleteAllComponent,
     GridsterTestComponent,
+    PanelCardsComponent,
+    CreateAndEditCardComponent,
   ],
   imports: [
     BrowserModule,

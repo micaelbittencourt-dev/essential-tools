@@ -1,15 +1,16 @@
-<div>
-  <input type="text" #inputName>
-  <button (click)="addItem(inputName.value)">>></button>
-</div>
 <gridster [options]="options">
   <gridster-item [item]="item" *ngFor="let item of dashboard">
     <div class="item-buttons" *ngIf="item['hasContent']">
       <button class="drag-handler" mat-icon-button>
         <mat-icon>open_with</mat-icon>
       </button>
-      
+      <button class="delete-handler" mat-icon-button (click)="removeItem(item)">
+        <mat-icon>delete</mat-icon>
+      </button>
     </div>
-    <label >{{ item['label'] }}</label>
+    <div class="body-gridster-item">
+      <label>{{ item['label'] }}</label>
+      <label>{{ item['id'] }}</label>
+    </div>
   </gridster-item>
 </gridster>

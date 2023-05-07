@@ -5,6 +5,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatIconModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    DragDropModule,
+    MatMenuModule,
+    MatDialogModule
 
   ],
   exports: [
@@ -23,7 +29,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatIconModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    DragDropModule,
+    MatMenuModule,
+    MatDialogModule
   ]
 })
 export class NgMaterialModule { }
